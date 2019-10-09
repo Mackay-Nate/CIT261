@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Events</title>
-    <script src=".js"></script>
-    <link rel="stylesheet" type="text/css" href=".css">   
+    <link rel="stylesheet" type="text/css" href="events.css"> 
   </head>
 
 <body>
@@ -14,8 +13,8 @@
   <h2>From www.w3schools.com here are lists of many of the possible events:</h2>
      <h3><a href="https://www.w3schools.com/tags/ref_eventattributes.asp">www.w3schools.com</a></h3>
   <p>
-    <h3>Window Event Attributes Attribute</h3>
-    <ul>
+    <h3 onclick="moreRoom('window')">Window Event Attributes Attribute</h3>
+    <ul id="window">
       <li>onafterprint</li>
       <li>onbeforeprint</li>
       <li>onbeforeunload</li>
@@ -35,8 +34,8 @@
   </p>
 
   <p>
-    <h3>Form Events</h3>
-    <ul>
+    <h3 onclick="moreRoom('form')">Form Events</h3>
+    <ul id="form">
       <li>onblur</li>
       <li>onchange</li>
       <li>oncontextmenu</li>
@@ -51,8 +50,8 @@
   </p>
 
   <p>
-    <h3>Keyboard Events</h3>
-    <ul>
+    <h3 onclick="moreRoom('key')">Keyboard Events</h3>
+    <ul id="key">
       <li>onkeydown</li>
       <li>onkeypress</li>
       <li>onkeyup</li>
@@ -60,9 +59,10 @@
   </p>
 
   <p>
-    <h3>Mouse Events</h3>
-    <ul>
-      <li>onclick</li>
+    <div >
+    <h3 onclick="moreRoom('mouse')">Mouse Events</h3>
+    <ul id="mouse">
+      <li onclick="this.style.fontSize = '200%'">onclick</li>
       <li>ondblclick</li>
       <li>onmousedown</li>
       <li>onmousemove</li>
@@ -71,6 +71,71 @@
       <li>onmouseup</li>
       <li>onwheel</li>
     </ul>
+    </div>
   </p>
+
+  <p>
+    <h3 onclick="moreRoom('drag')">Drag Events</h3>
+    <ul id="drag">
+      <li>ondrag</li>
+      <li>ondragend</li>
+      <li>ondragenter</li>
+      <li>ongradleave</li>
+      <li>ondragover</li>
+      <li>ondragstart</li>
+      <li>ondrop</li>
+      <li>onscroll</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('clip')">Clipboard</h3>
+    <ul id="clip">
+      <li>oncopy</li>
+      <li>oncut</li>
+      <li>onpaste</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('media')">Media Events</h3>
+    <ul id="media">
+      <li>onabort</li>
+      <li>oncanplay</li>
+      <li>oncanplaythrough</li>
+      <li>oncuechange</li>
+      <li>ondurationchange</li>
+      <li>onemptied</li>
+      <li>onended</li>
+      <li>onerror</li>
+      <li>onloadeddata</li>
+      <li>onloadedmetadata</li>
+      <li>onloadstart</li>
+      <li>onpause</li>
+      <li>onplay</li>
+      <li>onplaying</li>
+      <li>onprogress</li>
+      <li>onratechange</li>
+      <li>onseeked</li>
+      <li>onseeking</li>
+      <li>onstalled</li>
+      <li>onsuspend</li>
+      <li>ontimeupdate</li>
+      <li>onvolumechange</li>
+      <li>onwaiting</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3>Misc Events</h3>
+    <ul>
+      <li>ontoggle</li>
+    </ul>
+  </p>
+
+
+
+  <script src="events.js"></script>
+
 </body>
 </html>
