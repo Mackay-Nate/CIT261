@@ -31,10 +31,36 @@ function whileloop() {
   }
 
   document.getElementById("whileloop").innerHTML = whiletext;
-}
+};
 
 
+function conditions() { 
+
+  document.getElementById("condition").innerHTML = "Some text";
+};
 
 
+function functions() { 
+
+  document.getElementById("functions").innerHTML = "Some text";
+};
+
+
+function variables() { 
+
+  document.getElementById("variable").innerHTML = "Some text";
+};
+
+
+function parameters() { 
+
+  document.getElementById("parameter").innerHTML = "Some text";
+};
+
+
+function arrays() { 
+
+  document.getElementById("array").innerHTML = "Some text";
+};
 
 
