@@ -78,19 +78,33 @@ function switches() {
 }
 
 
-function functions() { 
-
-  document.getElementById("functions").innerHTML = "Some text";
+function sqrt(item, placement) { 
+  var amount = item.value;
+  message = amount + " cubed equals "
+  document.getElementById(placement.id).innerHTML = message + (amount * amount * amount);
 };
 
+function sqrt2() { 
+  document.getElementById("functions2").innerHTML = sqrt;
+}
 
 function variables() { 
-
-  document.getElementById("variable").innerHTML = "Some text";
+  text = "";
+  text = '<table>'
+  text += '<tr><td width="225px">var name;</td><td>// declare a variable and leave it undefined </td></tr>';
+  text += '<tr><td>var 2021Salary = 2,000,000;</td><td>//declare a variable and assign a value</td></tr>';
+  text += '<tr><td>name = "Johan Baer";</td><td>//assign a value to a previously declared variable </td></tr>';
+  text += '<tr><td>var kids = 3, car = "Civic";</td><td>//declare and assign multiples at once</td></tr></table>';
+  document.getElementById("variable").innerHTML = text;
 };
 
 
 function parameters() { 
+  text = "";
+  text += '<tr><td>var name;</td><td>// declare a variable and leave it undefided <br>';
+  text += 'var car = "Civic";  //declare a variable and assign a value <br>';
+  text += 'name = "Johan Baer"; //assign a value to a previously declared variable <br>';
+  document.getElementById("variable").innerHTML = text;
 
   document.getElementById("parameter").innerHTML = "Some text";
 };
