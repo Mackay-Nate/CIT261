@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <link rel="stylesheet" type="text/css" href="events.css"> 
+  </head>
+
+<body>
+
+  <h2>From www.w3schools.com here are lists of many of the possible events:</h2>
+     <h3><a href="https://www.w3schools.com/tags/ref_eventattributes.asp">www.w3schools.com</a></h3>
+  <div style="width:500px;">
+    <p>
+    <h3 onclick="moreRoom('window')">Window Event Attributes Attribute</h3>
+    <ul id="window">
+      <li>onafterprint</li>
+      <li>onbeforeprint</li>
+      <li>onbeforeunload</li>
+      <li>onerror</li>
+      <li>onhashchange</li>
+      <li>onload</li>
+      <li>onmessage</li>
+      <li>onoffline</li>
+      <li>ononline</li>
+      <li>onpagehide</li>
+      <li>onpageshow</li>
+      <li>onpopstate</li>
+      <li>onresize</li>
+      <li>onstorage</li>
+      <li>onunload</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('form')">Form Events</h3>
+    <ul id="form">
+      <li>onblur</li>
+      <li>onchange</li>
+      <li>oncontextmenu</li>
+      <li>onfocus</li>
+      <li>oninput</li>
+      <li>oninvalid</li>
+      <li>onreset</li>
+      <li>onsearch</li>
+      <li>onselect</li>
+      <li>onsubmit</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('key')">Keyboard Events</h3>
+    <ul id="key">
+      <li>onkeydown</li>
+      <li>onkeypress</li>
+      <li>onkeyup</li>
+    </ul>
+  </p>
+
+  <p>
+    <div >
+    <h3 onclick="moreRoom('mouse')" ondblclick="lessRoom('mouse')">Mouse Events</h3>
+    <ul id="mouse">
+      <li onclick="this.style.fontSize = '200%'">onclick</li>
+      <li>ondblclick</li>
+      <li onmousedown="this.style.background = 'lightblue'">onmousedown</li>
+      <li onmouseover="this.style.background = 'lightblue'">onmousemove</li>
+      <li onmouseout="if (this.style.background != 'lightblue') { this.style.background = 'lightblue' } else {
+        this.style.background = 'white' }">onmouseout</li>
+      <li onmouseover="this.style.background = 'lightblue'">onmouseover</li>
+      <li onmouseup="this.style.background = 'lightblue'">onmouseup</li>
+      <li>onwheel</li>
+    </ul>
+    </div>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('drag')">Drag Events</h3>
+    <ul id="drag">
+      <li>ondrag</li>
+      <li>ondragend</li>
+      <li>ondragenter</li>
+      <li>ongradleave</li>
+      <li>ondragover</li>
+      <li>ondragstart</li>
+      <li>ondrop</li>
+      <li>onscroll</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('clip')">Clipboard</h3>
+    <ul id="clip">
+      <li onclick="showMe('copy')">oncopy</li>
+      <li class="hideMe" id="copy" oncopy="document.getElementById('copy').innerHTML = 'This has been copied.'">Copy me!</li>
+      <div id="cut1">
+        <li onclick="showMe('cut2')">oncut</li>
+        <li class="hideMe" id="cut2" oncut="document.getElementById('cut1').style.background = 'red'">
+          <textarea rows="4" cols="50" oncut="this.style.background = 'red'">If any of these words are cut out then the background will turn red.</textarea></li>
+      </div>
+      <div id="pasteDiv">
+        <li onclick="showMe('paste')">onpaste</li>
+        <li class="hideMe" id="paste" onpaste="document.getElementById('pasteDiv').style.background = 'lightblue'">Pasting anything here will result in these elements turning blue.<br>
+          <textarea rows="4" cols="50" onpaste="this.style.background = 'lightblue'"></textarea></li>
+      </div>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('media')">Media Events</h3>
+    <ul id="media">
+      <li>onabort</li>
+      <li>oncanplay</li>
+      <li>oncanplaythrough</li>
+      <li>oncuechange</li>
+      <li>ondurationchange</li>
+      <li>onemptied</li>
+      <li>onended</li>
+      <li>onerror</li>
+      <li>onloadeddata</li>
+      <li>onloadedmetadata</li>
+      <li>onloadstart</li>
+      <li>onpause</li>
+      <li>onplay</li>
+      <li>onplaying</li>
+      <li>onprogress</li>
+      <li>onratechange</li>
+      <li>onseeked</li>
+      <li>onseeking</li>
+      <li>onstalled</li>
+      <li>onsuspend</li>
+      <li>ontimeupdate</li>
+      <li>onvolumechange</li>
+      <li>onwaiting</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3>Misc Events</h3>
+    <ul>
+      <li>ontoggle</li>
+    </ul>
+  </p>
+  </div>
+
+  <p class="hideMe">
+  <img src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4" onmouseover="https://avatars0.githubusercontent.com/u/55464697?s=400&v=4">
+  <img src="https://avatars0.githubusercontent.com/u/55464697?s=400&v=4">
+
+  <script src="events.js"></script>
+
+</body>
+</html>
