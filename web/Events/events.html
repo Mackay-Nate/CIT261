@@ -14,7 +14,7 @@
      <h3><a href="https://www.w3schools.com/tags/ref_eventattributes.asp">www.w3schools.com</a></h3>
   <div style="width:500px;">
     <p>
-    <h3 onclick="moreRoom('window')">Window Event Attributes Attribute</h3>
+    <h3 onclick="moreRoom('window')" ondblclick="lessRoom('window')">Window Event Attributes Attribute</h3>
     <ul id="window">
       <li>onafterprint</li>
       <li>onbeforeprint</li>
@@ -35,7 +35,7 @@
   </p>
 
   <p>
-    <h3 onclick="moreRoom('form')">Form Events</h3>
+    <h3 onclick="moreRoom('form')" ondblclick="lessRoom('form')">Form Events</h3>
     <ul id="form">
       <li>onblur</li>
       <li>onchange</li>
@@ -51,7 +51,7 @@
   </p>
 
   <p>
-    <h3 onclick="moreRoom('key')">Keyboard Events</h3>
+    <h3 onclick="moreRoom('key')" ondblclick="lessRoom('key')">Keyboard Events</h3>
     <ul id="key">
       <li>onkeydown</li>
       <li>onkeypress</li>
@@ -61,23 +61,22 @@
 
   <p>
     <div >
-    <h3 onclick="moreRoom('mouse')" ondblclick="lessRoom('mouse')">Mouse Events</h3>
+    <h3 onclick="moreRoom('mouse')" ondblclick="lessRoom('mouse')" style="user-select: none">Mouse Events</h3>
     <ul id="mouse">
-      <li onclick="this.style.fontSize = '200%'">onclick</li>
-      <li>ondblclick</li>
-      <li onmousedown="this.style.background = 'lightblue'">onmousedown</li>
-      <li onmouseover="this.style.background = 'lightblue'">onmousemove</li>
-      <li onmouseout="if (this.style.background != 'lightblue') { this.style.background = 'lightblue' } else {
-        this.style.background = 'white' }">onmouseout</li>
-      <li onmouseover="this.style.background = 'lightblue'">onmouseover</li>
-      <li onmouseup="this.style.background = 'lightblue'">onmouseup</li>
-      <li>onwheel</li>
+      <li onclick="mouse(this)">onclick</li>
+      <li ondblclick="mouse(this)">ondblclick</li>
+      <li onmousedown="mouse(this)">onmousedown</li>
+      <li onmouseover="mouse(this)">onmousemove</li>
+      <li onmouseout="mouse(this)">onmouseout</li>
+      <li onmouseover="mouse(this)">onmouseover</li>
+      <li onmouseup="mouse(this)">onmouseup</li>
+      <li onwheel="mouse(this)">onwheel</li>
     </ul>
     </div>
   </p>
 
   <p>
-    <h3 onclick="moreRoom('drag')">Drag Events</h3>
+    <h3 onclick="moreRoom('drag')" ondblclick="lessRoom('drag')">Drag Events</h3>
     <ul id="drag">
       <li>ondrag</li>
       <li>ondragend</li>
@@ -91,7 +90,7 @@
   </p>
 
   <p>
-    <h3 onclick="moreRoom('clip')">Clipboard</h3>
+    <h3 onclick="moreRoom('clip')" ondblclick="lessRoom('clip'); document.getElementById('cut1').style.background = 'white'; document.getElementById('pasteDiv').style.background = 'white'">Clipboard</h3>
     <ul id="clip">
       <li onclick="showMe('copy')">oncopy</li>
       <li class="hideMe" id="copy" oncopy="document.getElementById('copy').innerHTML = 'This has been copied.'">Copy me!</li>
@@ -109,7 +108,23 @@
   </p>
 
   <p>
-    <h3 onclick="moreRoom('media')">Media Events</h3>
+    <h3 onclick="moreRoom('animation')" ondblclick="lessRoom('animation')">Animations</h3>
+    <ul id="animation">
+      <li>animationend</li>
+      <li>animationiteration</li>
+      <li>animationstart</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('transition')" ondblclick="lessRoom('transition')">Transitions</h3>
+    <ul id="transition">
+      <li>transitionend</li>
+    </ul>
+  </p>
+
+  <p>
+    <h3 onclick="moreRoom('media')" ondblclick="lessRoom('media')">Media Events</h3>
     <ul id="media">
       <li>onabort</li>
       <li>oncanplay</li>
@@ -138,11 +153,12 @@
   </p>
 
   <p>
-    <h3>Misc Events</h3>
-    <ul>
+    <h3 onclick="moreRoom('misc')" ondblclick="lessRoom('misc')">Misc Events</h3>
+    <ul id="misc">
       <li>ontoggle</li>
     </ul>
   </p>
+
   </div>
 
   <p class="hideMe">
