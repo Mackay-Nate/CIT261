@@ -47,12 +47,12 @@
       calling a function name without () will display the function definition.<br>
       Function cannot access variable within another function. <br>
       Rules for function names are the same as variable names. <br>
-      <div onchange="sqrt(sqrt1, functions1)">Example using () <br>
-      Enter amount<input id=sqrt1 type="text"> </div>
+      <div onchange="cubed(function1, functions1)">Example using () <br>
+      Enter amount<input id=function1 type="text"> </div>
     </p>
     <p id="functions1" class="jsResults"><br></p>
-    <p onchange="sqrt2()">Example without () <br>
-      Enter amount<input id=sqrt2 type="text"> </div>
+    <p onchange="cubed2()">Example without () <br>
+      Enter amount<input id=function2 type="text"> </div>
     </p>
     <p id="functions2" class="jsResults"><br><br></p>
 
@@ -61,7 +61,7 @@
   
     <p onclick="variables()">
       Variable names contain letters, digits, underscores, and $ <br>
-      Variable names must begin with a letter <br>
+      Variable names must begin with a letter, $, or a _ <br>
       Variable names are case sensitive <br>
       Reserved words cannot be used <br>
       Declaring variables example: 

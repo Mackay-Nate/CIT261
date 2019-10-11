@@ -69,14 +69,14 @@ function switches() {
 }
 
 
-function sqrt(item, placement) { 
+function cubed(item, placement) { 
   var amount = item.value;
   message = amount + " cubed equals "
   document.getElementById(placement.id).innerHTML = message + (amount * amount * amount);
 };
 
-function sqrt2() { 
-  document.getElementById("functions2").innerHTML = sqrt;
+function cubed2() { 
+  document.getElementById("functions2").innerHTML = cubed;
 }
 
 function variables() { 
