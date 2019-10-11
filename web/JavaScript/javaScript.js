@@ -1,13 +1,4 @@
 
-function showHideMe(item) { 
-  if (item.style.display == "none") { 
-    item.style.display = "initial";
-  } else { 
-    item.style.display = "none";
-  }
-};
-
-
 function forloop() { 
   var ourcars = ["Toyota Prius", "Honda Civic", "VW Jetta"]; 
   var text = ""; 
@@ -39,9 +30,9 @@ function conditions() {
   var hour = new Date().getHours();
   var minutes = new Date().getMinutes();
   
-  if (hour < 10) {
+  if (hour < 12) {
     message = "   Good morning";
-  } else if (hour < 20) {
+  } else if (hour < 18) {
     message = "   Good day";
   } else {
     message = "   Good evening";
@@ -91,7 +82,7 @@ function sqrt2() {
 function variables() { 
   text = "";
   text = '<table>'
-  text += '<tr><td width="225px">var name;</td><td>// declare a variable and leave it undefined </td></tr>';
+  text += '<tr><td width="225px">var name;</td><td>//declare a variable and leave it undefined </td></tr>';
   text += '<tr><td>var 2021Salary = 2,000,000;</td><td>//declare a variable and assign a value</td></tr>';
   text += '<tr><td>name = "Johan Baer";</td><td>//assign a value to a previously declared variable </td></tr>';
   text += '<tr><td>var kids = 3, car = "Civic";</td><td>//declare and assign multiples at once</td></tr></table>';
@@ -100,19 +91,31 @@ function variables() {
 
 
 function parameters() { 
-  text = "";
-  text += '<tr><td>var name;</td><td>// declare a variable and leave it undefided <br>';
-  text += 'var car = "Civic";  //declare a variable and assign a value <br>';
-  text += 'name = "Johan Baer"; //assign a value to a previously declared variable <br>';
-  document.getElementById("variable").innerHTML = text;
-
-  document.getElementById("parameter").innerHTML = "Some text";
+  var i, text = "";
+  text += "You like "
+  
+  for (i = 0; i < arguments.length - 1; i++) { 
+    text += arguments[i].value + ", ";
+  }
+  if (i > 1) { text += " and " }
+  text += arguments[i].value + ".";
+  
+  document.getElementById("parameter").innerHTML = text;
 };
 
 
 function arrays() { 
+  var group5 = ["Joseph", "Pedro", "Vitalii"];
+  message = 'var group5 = ["Joseph", "Pedro", "Vitalii"]; <br>'
+  message += "The array named group5 contains " + group5.toString() + "<br><br>";
 
-  document.getElementById("array").innerHTML = "Some text";
+  message += 'We can add something to the array using push() <br> group5.push("Nate"); <br>';
+  group5.push("Nate");
+  message += "Now the array contains " + group5.toString() + "<br><br>";
+  message += "sorting this array will give us this " + group5.sort() + "<br>";
+
+
+  document.getElementById("array").innerHTML = message;
 };
 
 
