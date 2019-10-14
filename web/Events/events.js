@@ -36,14 +36,6 @@ function mouse(item) {
 }
 
 
-function animation() { 
-  
-
-
-
-}
-
-
 function highlightMobile() { 
   //this is how to use js to change css for classes
   var mobile = document.getElementsByClassName('mobile');
@@ -55,4 +47,19 @@ function highlightMobile() {
     }
   }
 }
+
+
+function animation1() { 
+  document.getElementById('myAnimation').style.animation = "down 6s 1";
+}
+
+function animationStart() {
+  document.getElementById('myAnimation').style.backgroundColor = "lightorange";
+}
+
+function animationEnd() {
+  document.getElementById('myAnimation').style.backgroundColor = "lightgray";
+}
+
+
 

@@ -29,4 +29,18 @@ canvas {
   border: 1px solid darkgray;
 }
 
+#myAnimation { 
+  height: 200px;
+  width:  200px;
+  margin: 20px;
+  position: relative;
+  background: lightblue;
+}
+
+@keyframes down { 
+  from {left: 0px;}
+  to   {left: 300px}
+}
+
+
 

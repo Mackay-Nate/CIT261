@@ -68,8 +68,8 @@
     <div >
     <h3 onclick="moreRoom('mouse')" ondblclick="lessRoom('mouse')" style="user-select: none">Mouse Events</h3>
     <ul id="mouse">
-      <li onclick="mouse(this)">onclick</li>
-      <li ondblclick="mouse(this)">ondblclick</li>
+      <li onclick="mouse(this)" class="mobile">onclick</li>
+      <li ondblclick="mouse(this)" class="mobile">ondblclick</li>
       <li onmousedown="mouse(this)">onmousedown</li>
       <li onmouseover="mouse(this)">onmousemove</li>
       <li onmouseout="mouse(this)">onmouseout</li>
@@ -112,16 +112,26 @@
     </ul>
   </p>
 
-  <p>
-    <h3 onclick="moreRoom('animation'); showMe('animate')" ondblclick="lessRoom('animation')">Animation Events</h3>
+  <p animationstart="this.style.background = 'lightgreen'">
+    <h3 onclick="moreRoom('animation'); showMe('animate1')" ondblclick="lessRoom('animation')">Animation Events</h3>
     <ul id="animation" class="mobile">
       <li>animationend</li>
       <li>animationiteration</li>
       <li>animationstart</li>
     </ul>
-    <div class="hideMe" id="animate" >
+    <div class="hideMe" id="animate1">
+
+      <input type="button" value="         begin animation events     " onclick="animation1()">
+      <input type="button" value="animation transistions with CSS">
+      <input type="button" value="animation transistions with CSS">
+      <input type="button" value="animation transistions with CSS">
+      <div id="myAnimation" animationstart="this.style.background = 'lightgreen'" animationEnd="animationEnd()">
+
+      </div>
+    </div>
+    <div class="hideMe" id="animate2" >
       <div onmouseover='https://avatars0.githubusercontent.com/u/55464697?s=400&v=4'>
-      <img id="picture" src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4"></div>
+      <img id="picture" src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4" style="margin: 20px;"></div>
     </div>
   </p>
 
@@ -130,18 +140,18 @@
     <ul id="transition" class="mobile">
       <li>transitionend</li>
     </ul>
-    <div id="transitions" class="hideMe" onmouseover="https://avatars0.githubusercontent.com/u/55464697?s=400&v=4">
-      <img src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4">
+    <div id="transitions" class="hideMe" onmouseover="https://avatars0.githubusercontent.com/u/55464697?s=400&v=4" style="margin: 20px;">
+      <img style="max-width: 200px;" src="https://avatars3.githubusercontent.com/u/55348714?s=400&v=4" style="margin: 20px;">
     </div>
   </p>
 
   <p>
-    <h3 onclick="showMe('touches')" ondblclick="lessRoom('touch')">Touch Events</h3>
+    <h3 onclick="showMe('touches'); showMe('touchstart'); showMe('touchend'); showMe('touchmove')" ondblclick="lessRoom('touch')">Touch Events</h3>
     <ul id="touch" class="mobile">
       <li>ontouchcancel</li>
-      <li>ontouchend</li>
-      <li>ontouchmove</li>
-      <li>ontouchstart</li>
+      <li>ontouchend<span id="touchend" class="hideMe"> - the box will turn <span style='color:blue;'>blue.</span></span></li>
+      <li>ontouchmove<span id="touchmove" class="hideMe"> - the box will turn <span style='color:yellow;'>yellow.</span></li>
+      <li>ontouchstart <span id="touchstart" class="hideMe"> - the box will turn <span style='color:red;'>red.</span></li>
     </ul>
 
     <p id="touches" class="hideMe" 
@@ -153,7 +163,7 @@
       This canvas tag is not supported by your browser.
       </canvas>
     </p>
-  </p>
+  </p>  
 
   <p>
     <h3 onclick="moreRoom('media')" ondblclick="lessRoom('media')">Media Events</h3>
