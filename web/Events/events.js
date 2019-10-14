@@ -7,6 +7,7 @@ function moreRoom(list) {
 function lessRoom(list) { 
   document.getElementById(list).style.lineHeight = "19px";
 
+  //this is how to use js to change css for class objects 
   var hide = document.getElementsByClassName('hideMe');
   for (var i = 0; i < hide.length; i++) { 
     hide[i].style.display = "none";
@@ -31,6 +32,27 @@ function mouse(item) {
   } else { 
     item.style.fontSize = '100%';
     item.style.background = 'white'
+  }
+}
+
+
+function animation() { 
+  
+
+
+
+}
+
+
+function highlightMobile() { 
+  //this is how to use js to change css for classes
+  var mobile = document.getElementsByClassName('mobile');
+  for (var i = 0; i < mobile.length; i++) { 
+    if (mobile[i].style.background != "yellow") { 
+      mobile[i].style.background = "yellow";
+    } else { 
+      mobile[i].style.background = "white";
+    }
   }
 }
 
